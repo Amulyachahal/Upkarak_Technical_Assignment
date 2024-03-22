@@ -1,0 +1,62 @@
+body {
+  background-color: #efefef;
+}
+
+/* EXTRA SMALL DEVICES (PHONES, 600PX AND DOWN) */
+@media only screen and (max-width: 600px) {
+}
+
+/* MEDIUM DEVICES (LANDSCAPE TABLETS, 768PX AND UP) */
+
+@media only screen and (min-width: 600px) {
+  .cardContainer {
+    background-color: white;
+    border-radius: 10px;
+    margin: 1rem 0rem;
+    /* max-width: 50vw; */
+  }
+  .card {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .eventTime,
+  .eventHost,
+  .eventType {
+    font-size: 16px;
+    color: gray;
+    margin: 10px 0px;
+  }
+  .eventTitle {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .eventType {
+  }
+  .inviteIcon {
+    background-color: rgb(39, 39, 239);
+    color: white;
+    border-radius: 6px;
+    padding: 5px 15px;
+    max-width: fit-content;
+  }
+  .eventImageContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .eventImage {
+    width: 15vw;
+    height: 15vh;
+    /* object-fit: cover; */
+    border-radius: 10px;
+  }
+}
+
+/* LARGE DEVICES (LAPTOPS/DESKTOPS, 992PX AND UP) */
+
+@media only screen and (min-width: 992px) {
+}
+
+/* EXTRA LARGE DEVICES (LARGE LAPTOPS AND DESKTOPS, 1200PX AND UP) */
+@media only screen and (min-width: 1200px) {
+}
