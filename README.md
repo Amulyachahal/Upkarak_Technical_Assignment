@@ -23,6 +23,6 @@ Author
 This app was created by Amulya Chahal as part of Upkarak Technical Assignment. For any inquiries or feedback, please contact Amulyachahal@gmail.com.
 
 License
-This project is licensed under the [License Name] License - see the LICENSE file for details.
+This project is license free.
 
 Thank you for using the Event Creation App! We hope it enhances your event planning experience.
