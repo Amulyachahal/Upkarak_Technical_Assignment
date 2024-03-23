@@ -6,7 +6,7 @@ import placeholderImage from "../../Images/placeholder.png";
 
 const LandingPage = () => {
   const [imagePreview, setImagePreview] = useState(null);
-  const { state, dispatch } = useContext(DataContext);
+  const { state, dispatch, getEmptyFields } = useContext(DataContext);
   const [formData, setFormData] = useState({
     eventName: "",
     startDate: "",
@@ -35,7 +35,14 @@ const LandingPage = () => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    dispatch({ type: "SET_FORM_DATA", payload: formData });
+    const { eventName, eventLocation, startDate, endDate, image } = formData;
+
+    if ((eventName, eventLocation, startDate, endDate, image)) {
+      dispatch({ type: "SET_FORM_DATA", payload: formData });
+      alert("Event Created Successfully");
+    } else {
+      getEmptyFields(formData);
+    }
   };
 
   return (
