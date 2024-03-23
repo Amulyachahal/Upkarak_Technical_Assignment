@@ -40,6 +40,14 @@ const LandingPage = () => {
     if ((eventName, eventLocation, startDate, endDate, image)) {
       dispatch({ type: "SET_FORM_DATA", payload: formData });
       alert("Event Created Successfully");
+      setFormData({
+        eventName: "",
+        eventLocation: "",
+        startDate: "",
+        endDate: "",
+        requireApproval: false,
+        image: "",
+      });
     } else {
       getEmptyFields(formData);
     }
@@ -67,6 +75,7 @@ const LandingPage = () => {
                   <input
                     className={styles.titleInput}
                     type="text"
+                    value={formData.eventName}
                     placeholder="Event Name"
                     onChange={(event) =>
                       setFormData({
@@ -89,6 +98,7 @@ const LandingPage = () => {
                         <input
                           className={styles.date}
                           type="date"
+                          value={formData.startDate}
                           onChange={(event) =>
                             setFormData({
                               ...formData,
@@ -102,6 +112,7 @@ const LandingPage = () => {
                         <input
                           className={styles.date}
                           type="date"
+                          value={formData.endDate}
                           onChange={(event) =>
                             setFormData({
                               ...formData,
@@ -126,6 +137,7 @@ const LandingPage = () => {
                     <input
                       className={styles.locationInput}
                       type="text"
+                      value={formData.eventLocation}
                       placeholder="Add Event Location "
                       onChange={(event) =>
                         setFormData({
@@ -148,6 +160,7 @@ const LandingPage = () => {
                     <span>
                       <input
                         type="checkbox"
+                        value={formData.requireApproval}
                         onChange={(event) =>
                           setFormData({
                             ...formData,
@@ -178,6 +191,7 @@ const LandingPage = () => {
                     type="file"
                     id="file-input"
                     accept="image/*"
+                    // value={formData.image}
                     onChange={handleFileChange}
                     style={{ display: "none" }}
                   />
@@ -245,7 +259,9 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <button className={styles.button}>Create Event</button>
+            <div className={styles.buttonContainer}>
+              <button className={styles.button}>Create Event</button>
+            </div>
           </form>
         </section>
       </div>
