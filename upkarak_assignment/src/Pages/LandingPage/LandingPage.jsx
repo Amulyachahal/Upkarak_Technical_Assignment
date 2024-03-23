@@ -35,9 +35,7 @@ const LandingPage = () => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    // console.log(formData);
     dispatch({ type: "SET_FORM_DATA", payload: formData });
-    console.log(state.formData);
   };
 
   return (
