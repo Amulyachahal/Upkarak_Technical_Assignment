@@ -2,6 +2,7 @@ import styles from "./LandingPage.module.css";
 import NavBar from "../../Components/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { DataContext } from "../../Contexts/DataContext";
+import placeholderImage from "../../Images/placeholder.png";
 
 const LandingPage = () => {
   const [imagePreview, setImagePreview] = useState(null);
@@ -51,7 +52,7 @@ const LandingPage = () => {
                   <div>
                     <img
                       className={styles.icon}
-                      src={imagePreview ? imagePreview : ""}
+                      src={imagePreview ? imagePreview : placeholderImage}
                       alt="image icon"
                     />
                     <span className={styles.title}>Personal Calender</span>
@@ -70,41 +71,49 @@ const LandingPage = () => {
                     }
                   />
                 </div>
-                <div className={styles.dateInputContainer}>
-                  <div className={styles.dateIcon}>📆</div>
-                  <div>
-                    <div>
-                      <span>Start</span>
-                      <input
-                        className={styles.date}
-                        type="date"
-                        onChange={(event) =>
-                          setFormData({
-                            ...formData,
-                            startDate: event.target.value,
-                          })
-                        }
-                      />
-                    </div>{" "}
-                    <div>
-                      {" "}
-                      <span>End</span>
-                      <input
-                        className={styles.date}
-                        type="date"
-                        onChange={(event) =>
-                          setFormData({
-                            ...formData,
-                            endDate: event.target.value,
-                          })
-                        }
-                      />
+                <section className={styles.dateSection}>
+                  📆
+                  <div className={styles.dateInputContainer}>
+                    <div className={styles.dateIcon}>
+                      <div className={styles.date}>Start</div>
+                      <div className={styles.date}>End</div>
                     </div>
+
+                    <div>
+                      <div>
+                        <input
+                          className={styles.date}
+                          type="date"
+                          onChange={(event) =>
+                            setFormData({
+                              ...formData,
+                              startDate: event.target.value,
+                            })
+                          }
+                        />
+                      </div>{" "}
+                      <div>
+                        {" "}
+                        <input
+                          className={styles.date}
+                          type="date"
+                          onChange={(event) =>
+                            setFormData({
+                              ...formData,
+                              endDate: event.target.value,
+                            })
+                          }
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.date}>
                     <div>🕛 GMT+05:30 Calcutta</div>
                     <hr />
                     <div>🕛 Create Multi-Session Event</div>
                   </div>
-                </div>
+                </section>
+
                 <div className={styles.locationInputContainer}>
                   {" "}
                   <div className={styles.locationIcon}>📍</div>
@@ -152,14 +161,13 @@ const LandingPage = () => {
                     <span>Public</span>
                   </ul>
                 </div>
-                <button className={styles.button}>Create Event</button>
               </div>
               <div className={styles.themeContainer}>
-                <div className="file-upload">
+                <div className={styles.imageContainer}>
                   <img
                     alt="upload Image"
                     className={styles.previewImage}
-                    src={imagePreview ? imagePreview : ""}
+                    src={imagePreview ? imagePreview : placeholderImage}
                   />
                   <input
                     type="file"
@@ -179,19 +187,19 @@ const LandingPage = () => {
                     🌅
                   </label>
                 </div>{" "}
-                <div>Theme</div>
-                <div className={styles.themeSelector}>
-                  <ul className={`${styles.theme}`}>Title </ul>
-                  <ul className={`${styles.theme}`}>Title</ul>
-                  <ul className={`${styles.theme}`}>Title</ul>
-                  <ul className={`${styles.theme}`}>Title</ul>
-                </div>
-                <div className={styles.themeSelector}>
-                  <ul className={`${styles.themeTitle}`}>Minimal </ul>
-                  <ul className={`${styles.themeTitle}`}>Minimal</ul>
-                  <ul className={`${styles.themeTitle}`}>Minimal</ul>
-                  <ul className={`${styles.themeTitle}`}>Minimal</ul>
-                </div>
+                <div style={{ margin: "0rem 3rem" }}>Theme</div>
+                <ul className={styles.themeSelector}>
+                  <li className={`${styles.theme}`}>Title </li>
+                  <li className={`${styles.theme}`}>Title</li>
+                  <li className={`${styles.theme}`}>Title</li>
+                  <li className={`${styles.theme}`}>Title</li>
+                </ul>
+                <ul className={styles.themeSelector}>
+                  <li className={`${styles.themeTitle}`}>Minimal </li>
+                  <li className={`${styles.themeTitle}`}>Minimal</li>
+                  <li className={`${styles.themeTitle}`}>Minimal</li>
+                  <li className={`${styles.themeTitle}`}>Minimal</li>
+                </ul>
                 <div className={styles.selectors}>
                   <ul className={styles.selectorContainer}>
                     <span>
@@ -232,6 +240,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
+            <button className={styles.button}>Create Event</button>
           </form>
         </section>
       </div>

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import NavBar from "../Navbar/Navbar";
 import styles from "./EventCard.module.css";
 import { DataContext } from "../../Contexts/DataContext";
+import placeholderImage from "../../Images/placeholder.png";
 
 const EventCard = ({ formData }) => {
   const { state, dispatch } = useContext(DataContext);
@@ -17,7 +18,6 @@ const EventCard = ({ formData }) => {
   } = formData;
   return (
     <>
-      <NavBar />
       <div className={styles.cardContainer}>
         <div className={styles.card}>
           <div className={styles.eventInfo}>
@@ -33,7 +33,7 @@ const EventCard = ({ formData }) => {
               className={styles.eventImage}
               eventImage
               alt="event image"
-              src={image ? image : ""}
+              src={image ? image : placeholderImage}
             />
           </div>
         </div>
