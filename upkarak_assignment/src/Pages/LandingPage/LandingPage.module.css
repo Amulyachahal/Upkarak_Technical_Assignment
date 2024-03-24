@@ -30,6 +30,10 @@
   border: none;
   font-size: 26px;
 }
+
+.locationInput {
+  max-width: 60vw;
+}
 .titleInput::placeholder {
   padding: 1rem;
 }
