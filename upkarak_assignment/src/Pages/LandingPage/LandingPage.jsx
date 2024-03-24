@@ -96,7 +96,7 @@ const LandingPage = () => {
                     <div>
                       <div>
                         <input
-                          className={styles.date}
+                          className={`${styles.date} ${styles.dateInput}`}
                           type="date"
                           value={formData.startDate}
                           onChange={(event) =>
@@ -110,7 +110,7 @@ const LandingPage = () => {
                       <div>
                         {" "}
                         <input
-                          className={styles.date}
+                          className={`${styles.date} ${styles.dateInput}`}
                           type="date"
                           value={formData.endDate}
                           onChange={(event) =>
