@@ -3,6 +3,7 @@ import NavBar from "../../Components/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { DataContext } from "../../Contexts/DataContext";
 import placeholderImage from "../../Images/placeholder.png";
+import Switch from "../../Components/Switch/Switch";
 
 const LandingPage = () => {
   const [imagePreview, setImagePreview] = useState(null);
@@ -157,7 +158,7 @@ const LandingPage = () => {
                   </ul>{" "}
                   <ul>
                     <span>👍 Require Approval</span>
-                    <span>
+                    {/* <span>
                       <input
                         type="checkbox"
                         value={formData.requireApproval}
@@ -168,7 +169,8 @@ const LandingPage = () => {
                           })
                         }
                       />
-                    </span>
+                    </span> */}
+                    <Switch />
                   </ul>{" "}
                   <ul>
                     <span>🧺 Capacity</span>
@@ -195,18 +197,22 @@ const LandingPage = () => {
                     onChange={handleFileChange}
                     style={{ display: "none" }}
                   />
-                  <label
-                    style={{
-                      float: "revert-layer",
-                      cursor: "pointer",
-                    }}
-                    htmlFor="file-input"
-                    className="custom-upload-btn"
-                  >
-                    🌅
-                  </label>
+                  <div style={{ textAlign: "center" }}>
+                    <label
+                      style={{
+                        //   float: "revert-layer",
+                        cursor: "pointer",
+                      }}
+                      htmlFor="file-input"
+                      className={styles.uploadButton}
+                    >
+                      🌅
+                    </label>
+                  </div>
                 </div>{" "}
-                <div style={{ margin: "0rem 3rem" }}>Theme</div>
+                <div style={{ margin: "0rem 3rem", textAlign: "center" }}>
+                  Theme
+                </div>
                 <ul className={styles.themeSelector}>
                   <li className={`${styles.theme}`}>Title </li>
                   <li className={`${styles.theme}`}>Title</li>

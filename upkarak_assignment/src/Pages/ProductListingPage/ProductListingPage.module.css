@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  margin: 2rem 4rem;
+  margin: 20px 10px;
 }
 .headerContainer {
   display: flex;
@@ -11,6 +11,9 @@ body {
 }
 .headerContainer h2 {
   margin: 0;
+}
+h2 {
+  text-align: center;
 }
 
 /* EXTRA SMALL DEVICES (PHONES, 600PX AND DOWN) */

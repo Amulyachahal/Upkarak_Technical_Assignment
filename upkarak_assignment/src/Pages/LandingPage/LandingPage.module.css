@@ -12,8 +12,8 @@
 }
 .icon {
   border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .title {
   margin: 1rem;
@@ -104,23 +104,25 @@
 }
 .imageContainer {
   /* display: flex; */
+  text-align: center;
 }
 .previewImage {
-  width: 20rem;
-  /* object-fit: cover; */
+  width: 40vw;
+  /* object-fit: fill; */
   border-radius: 10px;
   /* margin: 0 auto; */
   margin: 1rem;
+}
+.uploadButton {
+  font-size: 1.5rem;
 }
 .themeContainer {
   align-self: center;
 }
 .themeSelector {
   display: flex;
-
-  /* justify-content: space-between; */
-
-  /* flex-direction: reverse; */
+  justify-content: center;
+  padding-inline-start: 0;
 }
 .themeSelector li {
   margin: 0rem 0.5rem;
@@ -151,7 +153,7 @@
 
 /* MEDIUM DEVICES (LANDSCAPE TABLETS, 768PX AND UP) */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .container {
     background-color: #efefef;
 
@@ -165,7 +167,8 @@
   }
   .icon {
     border-radius: 50%;
-    width: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   .title {
     margin: 1rem;
@@ -237,7 +240,8 @@
   .previewImage {
     width: 25vw;
     height: 30vh;
-    object-fit: cover;
+    /* border-radius: 10px; */
+    object-fit: contain;
     border-radius: 10px;
   }
   .themeContainer {
@@ -251,7 +255,7 @@
   }
   .themeSelector li {
     list-style: none;
-    margin: 0px 3px;
+    margin: 0px 20px;
   }
   .theme {
     border: 1px solid;
