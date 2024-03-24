@@ -2,6 +2,17 @@ body {
   background-color: #efefef;
 }
 
+.container {
+  margin: 2rem 4rem;
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.headerContainer h2 {
+  margin: 0;
+}
+
 /* EXTRA SMALL DEVICES (PHONES, 600PX AND DOWN) */
 @media only screen and (max-width: 600px) {
 }

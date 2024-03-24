@@ -1,6 +1,48 @@
 body {
   background-color: #efefef;
 }
+.cardContainer {
+  background-color: white;
+  border-radius: 10px;
+  margin: 1rem 0rem;
+  /* max-width: 50vw; */
+  box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.eventTime,
+.eventHost,
+.eventType {
+  font-size: 16px;
+  color: gray;
+  margin: 10px 0px;
+}
+.eventTitle {
+  font-size: 26px;
+  font-weight: bold;
+}
+.eventType {
+}
+.inviteIcon {
+  background-color: rgb(39, 39, 239);
+  color: white;
+  border-radius: 6px;
+  padding: 5px 15px;
+  max-width: fit-content;
+}
+.eventImageContainer {
+  display: flex;
+  justify-content: center;
+}
+.eventImage {
+  width: 15vw;
+  height: 15vh;
+  /* object-fit: cover; */
+  border-radius: 10px;
+}
 
 /* EXTRA SMALL DEVICES (PHONES, 600PX AND DOWN) */
 @media only screen and (max-width: 600px) {
@@ -56,6 +98,14 @@ body {
 /* LARGE DEVICES (LAPTOPS/DESKTOPS, 992PX AND UP) */
 
 @media only screen and (min-width: 992px) {
+  .eventImage {
+    width: 15rem;
+    height: 15rem;
+  }
+  .cardContainer {
+    max-width: 50vw;
+    margin: 0 auto;
+  }
 }
 
 /* EXTRA LARGE DEVICES (LARGE LAPTOPS AND DESKTOPS, 1200PX AND UP) */
